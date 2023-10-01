@@ -1,5 +1,6 @@
 package com.example.lab8diegod
 
+import MealDetailScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -10,7 +11,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.lab8diegod.ui.meals.view.MealsCategoriesScreen
+import com.example.lab8diegod.ui.categories.view.CategoriesScreen
+import com.example.lab8diegod.ui.meals.view.MealsScreen
+import com.example.lab8diegod.ui.meals.view.MealsScreen
 import com.example.lab8diegod.ui.theme.Lab8DiegoDTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,25 +26,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                   MealsCategoriesScreen()
+                   MealsScreen()
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Lab8DiegoDTheme {
-        Greeting("Android")
     }
 }

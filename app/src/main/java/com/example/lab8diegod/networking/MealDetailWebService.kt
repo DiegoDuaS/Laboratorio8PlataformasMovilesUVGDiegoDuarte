@@ -1,15 +1,17 @@
 package com.example.lab8diegod.networking
 
 
+import MealDetailApi
+import com.example.lab8diegod.networking.response.ListMealDetailResponse
 import com.example.lab8diegod.networking.response.ListMealsResponse
 import com.example.lab8diegod.networking.response.MealsApi
 import retrofit2.Retrofit
 import retrofit2.Call
 import retrofit2.converter.gson.GsonConverterFactory
 
-class MealsWebService {
+class MealDetailWebService {
 
-    private lateinit var api: MealsApi
+    private lateinit var api: MealDetailApi
 
     init {
         val retrofit = Retrofit.Builder()
@@ -17,11 +19,11 @@ class MealsWebService {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        api = retrofit.create(MealsApi::class.java)
+        api = retrofit.create(MealDetailApi::class.java)
     }
 
-    fun getMeals(): Call<ListMealsResponse> {
-        return api.getMeals()
+    fun getMealDetail(): Call<ListMealDetailResponse> {
+        return api.getMealDetail()
     }
 
 }
