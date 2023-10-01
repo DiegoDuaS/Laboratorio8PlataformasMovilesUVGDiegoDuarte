@@ -1,10 +1,11 @@
-package com.example.lab8diegod.networking.response
+package com.example.lab8diegod.networking
 
 
+import com.example.lab8diegod.networking.response.MealsApi
+import com.example.lab8diegod.networking.response.MealsCategoriesResponse
 import retrofit2.Retrofit
 import retrofit2.Call
 import retrofit2.converter.gson.GsonConverterFactory
-import com.example.lab8diegod.networking.response.MealsCategoriesResponse
 
 class MealsWebService {
 
