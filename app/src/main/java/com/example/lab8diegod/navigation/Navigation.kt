@@ -1,3 +1,9 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Programación de Platafromas Móviles
+ * Laboratorio 7
+ * Diego Duarte 22075
+ */
 package com.example.lab8diegod.navigation
 
 import MealDetailScreen
@@ -11,6 +17,10 @@ import androidx.navigation.compose.rememberNavController
 import com.example.lab8diegod.ui.categories.view.CategoriesScreen
 import com.example.lab8diegod.ui.meals.view.MealsScreen
 
+
+/**
+ * Composable Navigation
+ */
 @Composable
 fun Navigation(modifier: Modifier = Modifier) {
     val navController = rememberNavController()

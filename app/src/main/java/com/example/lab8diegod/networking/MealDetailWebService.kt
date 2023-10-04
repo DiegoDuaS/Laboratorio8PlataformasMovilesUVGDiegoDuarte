@@ -1,3 +1,9 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Programación de Platafromas Móviles
+ * Laboratorio 7
+ * Diego Duarte 22075
+ */
 package com.example.lab8diegod.networking
 
 
@@ -8,7 +14,9 @@ import com.example.lab8diegod.networking.response.MealsApi
 import retrofit2.Retrofit
 import retrofit2.Call
 import retrofit2.converter.gson.GsonConverterFactory
-
+/**
+ * Clase MealDetailWebService
+ */
 class MealDetailWebService {
 
     private lateinit var api: MealDetailApi

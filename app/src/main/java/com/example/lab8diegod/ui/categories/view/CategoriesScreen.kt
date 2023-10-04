@@ -1,3 +1,9 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Programación de Platafromas Móviles
+ * Laboratorio 7
+ * Diego Duarte 22075
+ */
 package com.example.lab8diegod.ui.categories.view
 
 import androidx.compose.foundation.Image
@@ -32,6 +38,9 @@ import com.example.lab8diegod.networking.response.CategoriesResponse
 import com.example.lab8diegod.networking.response.MealResponse
 import com.example.lab8diegod.ui.meals.view.MealsCategoriesViewModel
 
+/**
+ * Composable CategoriesScreen
+ */
 @Composable
 fun CategoriesScreen(navController: NavController) {
     val viewModel: CategoriesViewModel = viewModel()
@@ -50,6 +59,9 @@ fun CategoriesScreen(navController: NavController) {
 
 }
 
+/**
+ * Composable CardCategory
+ */
 @Composable
 fun CardCategory(categoria: CategoriesResponse, navController: NavController){
 

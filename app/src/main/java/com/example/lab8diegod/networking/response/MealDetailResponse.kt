@@ -1,12 +1,22 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Programación de Platafromas Móviles
+ * Laboratorio 7
+ * Diego Duarte 22075
+ */
 package com.example.lab8diegod.networking.response
 
 import com.google.gson.annotations.SerializedName
 
-
-
+/**
+ * Data Class ListMealDetailResponse
+ */
 data class ListMealDetailResponse(val meals: List<MealDetailResponse>) {
 }
 
+/**
+ * Data Class MealDetailResponse
+ */
 data class MealDetailResponse(
     @SerializedName("idMeal") val id: String,
     @SerializedName("strMeal") val name: String,

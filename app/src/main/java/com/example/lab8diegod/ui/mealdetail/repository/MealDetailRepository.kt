@@ -1,3 +1,9 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Programación de Platafromas Móviles
+ * Laboratorio 7
+ * Diego Duarte 22075
+ */
 import com.example.lab8diegod.networking.MealDetailWebService
 import com.example.lab8diegod.networking.MealsWebService
 import com.example.lab8diegod.networking.response.ListMealDetailResponse
@@ -6,6 +12,9 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+/**
+ * Clase MealDetailsViewModel
+ */
 class MealDetailRepository(private val webService: MealDetailWebService = MealDetailWebService()) {
     fun getMealDetail(successCallback: (response: ListMealDetailResponse?) -> Unit) {
         return webService.getMealDetail().enqueue(object : Callback<ListMealDetailResponse> {

@@ -1,3 +1,9 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Programación de Platafromas Móviles
+ * Laboratorio 7
+ * Diego Duarte 22075
+ */
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -27,6 +33,9 @@ import com.example.lab8diegod.networking.response.MealDetailResponse
 import com.example.lab8diegod.networking.response.MealResponse
 import com.example.lab8diegod.ui.meals.view.MealsCategoriesViewModel
 
+/**
+ * Composable MealDetailScreen
+ */
 @Composable
 fun MealDetailScreen(navController: NavController) {
     val viewModel: MealDetailViewModel = viewModel()
@@ -45,6 +54,9 @@ fun MealDetailScreen(navController: NavController) {
 
 }
 
+/**
+ * Composable PantallaDetail
+ */
 @Composable
 fun pantallaDetail(meal: MealDetailResponse){
     Column(

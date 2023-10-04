@@ -1,3 +1,10 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Programación de Platafromas Móviles
+ * Laboratorio 7
+ * Diego Duarte 22075
+ */
+
 package com.example.lab8diegod
 
 import MealDetailScreen
@@ -17,6 +24,9 @@ import com.example.lab8diegod.ui.meals.view.MealsScreen
 import com.example.lab8diegod.ui.meals.view.MealsScreen
 import com.example.lab8diegod.ui.theme.Lab8DiegoDTheme
 
+/**
+ * Actividad principal.
+ */
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
