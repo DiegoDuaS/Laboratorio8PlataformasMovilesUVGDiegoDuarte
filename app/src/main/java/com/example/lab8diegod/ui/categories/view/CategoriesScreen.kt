@@ -24,14 +24,16 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import coil.compose.rememberImagePainter
+import com.example.lab8diegod.navigation.NavigationState
 import com.example.lab8diegod.networking.response.CategoriesResponse
 import com.example.lab8diegod.networking.response.MealResponse
 import com.example.lab8diegod.ui.meals.view.MealsCategoriesViewModel
 
 @Composable
-fun CategoriesScreen() {
+fun CategoriesScreen(navController: NavController) {
     val viewModel: CategoriesViewModel = viewModel()
     val rememberedCategories: MutableState<List<CategoriesResponse>> = remember { mutableStateOf(emptyList<CategoriesResponse>()) }
 
@@ -42,20 +44,23 @@ fun CategoriesScreen() {
 
     LazyColumn {
         items(rememberedCategories.value) { category ->
-            CardCategory(categoria = category)
+            CardCategory(categoria = category, navController)
         }
     }
 
 }
 
 @Composable
-fun CardCategory(categoria: CategoriesResponse){
+fun CardCategory(categoria: CategoriesResponse, navController: NavController){
 
     Card(
         modifier = Modifier
             .padding(8.dp)
             .background(color = Color.Cyan)
             .fillMaxWidth()
+            .clickable {
+                navController.navigate(NavigationState.Meals.route)
+            }
     ){
         Column(
             modifier = Modifier

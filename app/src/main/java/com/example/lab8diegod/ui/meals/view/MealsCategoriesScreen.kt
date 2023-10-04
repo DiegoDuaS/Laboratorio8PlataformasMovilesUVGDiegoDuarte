@@ -1,6 +1,7 @@
 package com.example.lab8diegod.ui.meals.view
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -22,12 +23,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
 import coil.compose.AsyncImage
+import com.example.lab8diegod.navigation.NavigationState
 import com.example.lab8diegod.networking.response.CategoriesResponse
 import com.example.lab8diegod.networking.response.MealResponse
 
 @Composable
-fun MealsScreen() {
+fun MealsScreen(navController: NavController) {
     val viewModel: MealsCategoriesViewModel = viewModel()
     val rememberedMeals: MutableState<List<MealResponse>> = remember { mutableStateOf(emptyList<MealResponse>()) }
 
@@ -38,20 +41,23 @@ fun MealsScreen() {
 
     LazyColumn {
         items(rememberedMeals.value) { meal ->
-            CardMeals(meal = meal)
+            CardMeals(meal = meal, navController = navController)
         }
     }
 
 }
 
 @Composable
-fun CardMeals(meal: MealResponse){
+fun CardMeals(meal: MealResponse, navController: NavController){
 
     Card(
         modifier = Modifier
             .padding(8.dp)
             .background(color = Color.Cyan)
             .fillMaxWidth()
+            .clickable {
+                navController.navigate(NavigationState.MealDetail.route)
+            }
     ){
         Column(
             modifier = Modifier
@@ -74,6 +80,7 @@ fun CardMeals(meal: MealResponse){
                 modifier = Modifier
                     .size(300.dp)
             )
+
 
         }
     }

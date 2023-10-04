@@ -4,6 +4,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface MealDetailApi {
-    @GET("filter.php?c=Seafood")
+    @GET("lookup.php?i=52944")
     fun getMealDetail(): Call<ListMealDetailResponse>
 }
